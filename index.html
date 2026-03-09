@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiencia 3D interactiva sobre La Conquista de México, creada con Three.js y GSAP.">
+    <meta name="author" content="Marco Escalona">
+    <title>La Conquista de México - Experiencia 3D Completa</title>
+    
+        <link rel="icon" type="image/png" href="favicon.png" />
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <div id="loading">Generando Historia...</div>
+    
+    <div id="school-logo">EBVG</div>
+
+    <div id="lang-container">
+        <div class="lang-btn" onclick="setLanguage('es')" title="Español">
+            <svg viewBox="0 0 750 500">
+                <rect width="750" height="500" fill="#AA151B"/>
+                <rect y="125" width="750" height="250" fill="#F1BF00"/>
+                <g transform="translate(200, 250) scale(0.6)">
+                    <path d="M-50,-60 h100 v80 c0,40 -20,60 -50,80 c-30,-20 -50,-40 -50,-80 z" fill="#AA151B" stroke="black" stroke-width="2"/>
+                    <circle cx="0" cy="0" r="30" fill="#F1BF00" stroke="#AA151B"/>
+                </g>
+            </svg>
+        </div>
+        <div class="lang-btn" onclick="setLanguage('en')" title="English">
+            <svg viewBox="0 0 60 30">
+                <path d="M0,0 v30 h60 v-30 z" fill="#00247d"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#cf142b" stroke-width="4"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#cf142b" stroke-width="6"/>
+            </svg>
+        </div>
+    </div>
+
+    <div id="start-screen">
+        <h1 id="ui-title">La Conquista de México</h1>
+        <h2 id="ui-subtitle">por la escuela berta von glumer</h2>
+        <button id="start-btn" onclick="startStory()">Comenzar Historia</button>
+    </div>
+
+    <div class="vignette"></div>
+    <div id="canvas-container"></div>
+
+    <div id="ui-layer">
+        <div class="info-panel" id="info-panel">
+            <h2 id="year-display">1519</h2>
+            <h1 id="title-display" class="panel-title">El Desembarco</h1>
+            <p id="desc-display">Hernán Cortés llega a las costas de Veracruz. Quema sus naves para evitar el retorno, marcando el inicio de una expedición sin vuelta atrás hacia el corazón del imperio Azteca.</p>
+            <button id="next-btn" class="nav-btn" onclick="nextChapter()">Avanzar Historia</button>
+        </div>
+    </div>
+
+</body>
+</html>

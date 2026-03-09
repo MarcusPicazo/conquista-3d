@@ -1,0 +1,23 @@
+{
+  "name": "conquista-3d-experience",
+  "version": "1.0.0",
+  "description": "Experiencia 3D interactiva sobre la Conquista de México, utilizando WebGL, Three.js y GSAP.",
+  "main": "main.js",
+  "scripts": {
+    "start": "serve ."
+  },
+  "keywords": [
+    "3d",
+    "three.js",
+    "gsap",
+    "webgl",
+    "interactive",
+    "history",
+    "front-end"
+  ],
+  "author": "Marco Escalona",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
